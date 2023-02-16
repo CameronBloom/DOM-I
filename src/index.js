@@ -48,7 +48,9 @@ const arrNavLinks =Array.from(navLinks);
 arrNavLinks.map((element, index) => {
   const strClassName = "nav-item-" + (index + 1).toString();
   element.classList.add(strClassName);
+  element.classList.add("italic");
   element.textContent = siteContent["nav"][strClassName];
+  element.className = ("italic");
 });
 
 // CTA SECTION
@@ -72,7 +74,12 @@ const arrMainCards =Array.from(mainCards);
 
 arrMainCards.map((card, index) => {
   card.children[0].textContent = siteContent["main-content"][mainData[index * 2]]
-  card.children[1].innerText = siteContent["main-content"][mainData[Math.abs(index * 2 - 1)]]
+  if (index === 0) {
+    card.children[1].textContent = siteContent["main-content"][mainData[Math.abs(index * 2 - 1)]];
+  } else {
+    card.children[1].textContent = siteContent["main-content"][mainData[index * 2 + 1]];
+  }
+  
 });
 
 const mainImage = document.querySelector(".middle-img");
@@ -88,7 +95,10 @@ const arrContactTexts =Array.from(contactTexts);
 
 contactHeading.textContent = siteContent["contact"]["contact-h4"];
 arrContactTexts.map((paragraph, index) => {
-  paragraph.innerText = siteContent["contact"][contactData[index + 1]]
+  paragraph.textContent = siteContent["contact"][contactData[index + 1]]
 });
 
 // FOOTER SECTION
+const footerLink = document.querySelector("footer a");
+footerLink.className = "bold";
+footerLink.textContent = siteContent["footer"]["copyright"];
