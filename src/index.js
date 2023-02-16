@@ -53,9 +53,11 @@ arrNavLinks.map((element, index) => {
   element.className = ("italic");
 });
 
+
 // CTA SECTION
 const headerImg = document.querySelector("#logo-img");
-headerImg.src = "http://localhost:9000/img/logo.png";
+headerImg.src = siteContent["images"]["logo-img"];
+// headerImg.src = "http://localhost:9000/img/logo.png";
 
 const ctaTitle = document.querySelector(".cta h1");
 ctaTitle.textContent = siteContent["cta"]["h1"]
@@ -64,7 +66,9 @@ const ctaButton = document.querySelector(".cta button");
 ctaButton.textContent = siteContent["cta"]["button"]
 
 const ctaImage = document.querySelector(".cta img");
-ctaImage.src = "http://localhost:9000/img/cta.png";
+ctaImage.src = siteContent["images"]["cta-img"];
+// ctaImage.src = "http://localhost:9000/img/cta.png";
+
 
 // MAIN CONTENT SECTION
 const mainData = Object.keys(siteContent["main-content"]);
@@ -83,7 +87,9 @@ arrMainCards.map((card, index) => {
 });
 
 const mainImage = document.querySelector(".middle-img");
-mainImage.src = "http://localhost:9000/img/accent.png";
+mainImage.src = siteContent["images"]["accent-img"];
+// mainImage.src = "http://localhost:9000/img/accent.png";
+
 
 // CONTACT SECTION
 const contactData = Object.keys(siteContent["contact"]);
@@ -93,12 +99,14 @@ const contactHeading = document.querySelector(".contact h4");
 const contactTexts = document.querySelectorAll(".contact p");
 const arrContactTexts =Array.from(contactTexts);
 
-contactHeading.textContent = siteContent["contact"]["contact-h4"];
+contactHeading.textContent = siteContent["contact"]["contact-h4"]; 
 arrContactTexts.map((paragraph, index) => {
   paragraph.textContent = siteContent["contact"][contactData[index + 1]]
 });
 
+
 // FOOTER SECTION
 const footerLink = document.querySelector("footer a");
-footerLink.className = "bold";
+footerLink.classList.add("bold")
+// footerLink.className = "bold";
 footerLink.textContent = siteContent["footer"]["copyright"];
