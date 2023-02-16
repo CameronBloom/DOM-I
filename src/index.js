@@ -63,3 +63,25 @@ ctaButton.textContent = siteContent["cta"]["button"]
 
 const ctaImage = document.querySelector(".cta img");
 ctaImage.src = "http://localhost:9000/img/cta.png";
+
+// MAIN CONTENT SECTION
+const mainData = Object.keys(siteContent["main-content"]);
+console.log(mainData);
+
+const mainCards = document.querySelectorAll(".text-content");
+const arrMainCards =Array.from(mainCards);
+
+arrMainCards.map((card, index) => {
+  card.children[0].textContent = siteContent["main-content"][mainData[index * 2]]
+  card.children[1].innerText = siteContent["main-content"][mainData[Math.abs(index * 2 - 1)]]
+});
+console.log(arrMainCards);
+
+// TOP
+const mainImage = document.querySelector(".middle-img");
+mainImage.src = "http://localhost:9000/img/accent.png";
+
+// BOTTOM
+// CONTACT SECTION
+
+// FOOTER SECTION
