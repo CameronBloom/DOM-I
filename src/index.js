@@ -66,7 +66,6 @@ ctaImage.src = "http://localhost:9000/img/cta.png";
 
 // MAIN CONTENT SECTION
 const mainData = Object.keys(siteContent["main-content"]);
-console.log(mainData);
 
 const mainCards = document.querySelectorAll(".text-content");
 const arrMainCards =Array.from(mainCards);
@@ -75,13 +74,21 @@ arrMainCards.map((card, index) => {
   card.children[0].textContent = siteContent["main-content"][mainData[index * 2]]
   card.children[1].innerText = siteContent["main-content"][mainData[Math.abs(index * 2 - 1)]]
 });
-console.log(arrMainCards);
 
-// TOP
 const mainImage = document.querySelector(".middle-img");
 mainImage.src = "http://localhost:9000/img/accent.png";
 
-// BOTTOM
 // CONTACT SECTION
+const contactData = Object.keys(siteContent["contact"]);
+console.log(contactData);
+
+const contactHeading = document.querySelector(".contact h4");
+const contactTexts = document.querySelectorAll(".contact p");
+const arrContactTexts =Array.from(contactTexts);
+
+contactHeading.textContent = siteContent["contact"]["contact-h4"];
+arrContactTexts.map((paragraph, index) => {
+  paragraph.innerText = siteContent["contact"][contactData[index + 1]]
+});
 
 // FOOTER SECTION
