@@ -41,6 +41,7 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 console.log('project wired!')
 
+// HEADER SECTION
 const navLinks = document.querySelectorAll("nav a");
 const arrNavLinks =Array.from(navLinks);
 
@@ -50,5 +51,15 @@ arrNavLinks.map((element, index) => {
   element.textContent = siteContent["nav"][strClassName];
 });
 
+// CTA SECTION
 const headerImg = document.querySelector("#logo-img");
 headerImg.src = "http://localhost:9000/img/logo.png";
+
+const ctaTitle = document.querySelector(".cta h1");
+ctaTitle.textContent = siteContent["cta"]["h1"]
+
+const ctaButton = document.querySelector(".cta button");
+ctaButton.textContent = siteContent["cta"]["button"]
+
+const ctaImage = document.querySelector(".cta img");
+ctaImage.src = "http://localhost:9000/img/cta.png";
