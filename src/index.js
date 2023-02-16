@@ -40,3 +40,15 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const navLinks = document.querySelectorAll("nav a");
+const arrNavLinks =Array.from(navLinks);
+
+arrNavLinks.map((element, index) => {
+  const strClassName = "nav-item-" + (index + 1).toString();
+  element.classList.add(strClassName);
+  element.textContent = siteContent["nav"][strClassName];
+});
+
+const headerImg = document.querySelector("#logo-img");
+headerImg.src = "http://localhost:9000/img/logo.png";

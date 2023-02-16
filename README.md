@@ -12,15 +12,15 @@ Inside `src/index.js` there is declared an object literal containing all the dat
 
 ## Git Setup
 
-* [ ] Create a forked copy of this project.
-* [ ] Clone your OWN version of the repository.
-* [ ] Push commits: `git push origin main`.
+* [x] Create a forked copy of this project.
+* [x] Clone your OWN version of the repository.
+* [x] Push commits: `git push origin main`.
 
 ## Running the project
 
-* [ ] Run `npm install` to download the project's dependencies.
-* [ ] Run `npm start` to launch the page on `http://localhost:3000`.
-* [ ] Run `npm test` to execute auto tests against your work (you'll need a new terminal window).
+* [x] Run `npm install` to download the project's dependencies.
+* [x] Run `npm start` to launch the page on `http://localhost:3000`.
+* [x] Run `npm test` to execute auto tests against your work (you'll need a new terminal window).
 
 ## MVP
 
